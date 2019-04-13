@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="{% static 'css/stylecc.css' %}" rel="stylesheet" type="text/css" />
+<!--[if IE 6]>
+<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a.js"></script>
+<script type="text/javascript">
+	DD_belatedPNG.fix('*');
+</script>
+<![endif]-->
+</head>
+
+<body id="ccclogin_bg">
+<div class="ccclogin_wrapper">
+  <div class="ccclogin_header"> <a href="#"><img src="{% static 'images/logo.png' %}" width="433" height="109" alt="金融妈招聘" /></a>
+    <div id="cccregword">登录</div>
+  </div>
+  <input type="hidden" id="resubmitToken" value="" />
+  <div class="cccccclogin_box_btp"></div>
+  <div class="ccclogin_box ccclogin_box2">
+    <form id="cccloginForm">
+     
+      <input type="text" id="email" name="email" tabindex="1" placeholder="请输入登录邮箱地址" />
+      <span class="error" style=" display:none;" >1fdfd</span>
+      <input type="password" id="password" name="password" tabindex="2" placeholder="请输入密码" />
+      <span class="error" style=" display:none;" >1fdfd</span>
+      <div class="clear"></div>
+      <label class="cccfl" for="checkbox">
+      <input type="checkbox" id="checkbox" name="checkbox" checked  class="checkbox valid" />
+        记住我</label>
+         <a href="#" target="_blank" class="fr" >忘记密码</a> 
+         <div class=" clear"></div>
+      <input type="submit" id="submitLogin" value="登录" />
+    </form>
+    <div class="ccclogin_right">
+      <p class="cccmb10">还没有金融妈账号</p>
+      <p><a  href="#"  class="cccregistor_now">立即注册</a></p>
+      <p class="login_others">使用以下帐号直接登录:</p>
+      <ul class="otherlogin">
+        <li><a href="#" class="icon_qq" title="使用腾讯QQ帐号登录"></a> </li>
+        <li><a  href="#" class="icon_xl"  title="使用新浪微博帐号登录" ></a> </li>
+        <li><a  href="#" class="icon_rr"  title="使用人人网帐号登录" ></a></li>
+        <li><a href="#" class="icon_wx"  title="使用微信帐号登录" ></a>
+      </ul>
+    </div>
+  </div>
+  <div class="ccclogin_box_btm"></div>
+  <div class="cc_copyright">Copyright © 2014-2015 jinrongma.com All Rights Reserved　金融妈</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,210 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="{% static 'css/stylecc.css' %}" rel="stylesheet" type="text/css" />
+</head>
+<!--[if IE 6]>
+<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a.js"></script>
+<script type="text/javascript">
+	DD_belatedPNG.fix('*');
+</script>
+<![endif]-->
+<body>
+<div id="cccheader">
+  <div class="ccchuany">
+    <p>你好 ，xxxxxx@163.com <a href="#">帮助</a></p>
+  </div>
+  <div class="cccwrapper"> <a href="" class="logo"> <img src="{% static 'images/logob.png' %}" width="256" height="63" alt="金融妈 jinrongma.com" /> </a>
+    <ul class="cccreset" id="navcccheader">
+      <li><a href="#">首页</a></li>
+      <li><a href="#" >招聘</a><i></i></li>
+      <li><a href="#" target="_blank">每日要闻</a><i></i></li>
+      <li><a href="#" rel="nofollow">金融社区</a></li>
+    </ul>
+    <div id="ccclogin"  > <a href="#" target="_blank" class="ccczc">注册</a> <a href="#" class="cccdn">登录</a> </div>
+  </div>
+</div>
+<!-- end #header -->
+
+<div id="container">
+  <div class="content_mid"> 
+    <!--创建新公司-->
+    <h2><em></em>填写公司信息</h2>
+    <div class="Create_newcompany">
+      <form class="stepForm" id="stepForm01">
+        <div class="ccc_text_1">基本信息为必填项，是求职者加速了解公司的窗口，认真填写吧！</div>
+        <div class="ccc_pic_1"><img src="{% static 'images/step1.png' %}" width="795" height="58" /></div>
+        <div class="ccc_box_720">
+          <h3>公司全称 <span>万德互联网</span></h3>
+          <h3>公司简称</h3>
+          <input type="text" placeholder="请输入公司简称，如:金融妈" value="" name="name" >
+          <div class="uploadlogo">
+            <ul>
+              <li>
+                <h3>公司LOGO</h3>
+                <div class="ccc_logo_pos"> <a href="#">
+                  <div id="ccc_logoNo"> <span>上传公司LOGO</span> <br>
+                    尺寸：200*200px <br>
+                    大小：小于2M </div>
+                  </a> </div>
+              </li>
+              <li>
+                <h3>微信二维码</h3>
+                <div class="ccc_logo_pos"> <a href="#">
+                  <div id="ccc_logoNo"> <span>上传二维码</span> <br>
+                    尺寸：200*200px <br>
+                    大小：小于2M </div>
+                  </a> </div>
+              </li>
+              <li>
+                <h3>微信二维码</h3>
+                <div class="ccc_logo_pos"> <a href="#">
+                  <div id="ccc_logoNo"> <span>上传二维码</span> <br>
+                    尺寸：200*200px <br>
+                    大小：小于2M </div>
+                  </a> </div>
+              </li>
+            </ul>
+            <div class="clear"></div>
+          </div>
+          <h3>公司网址</h3>
+          <input type="text" placeholder="请输入公司网址" value="" name="name" >
+          <h3>微博地址</h3>
+          <input type="text" placeholder="请输入微博地址" value="" name="name" >
+          <h3>微信账号</h3>
+          <input type="text" placeholder="请输入微信账号" value="" name="name" >
+          <h3>所在城市</h3>
+          <div class="ccc_citychoose">
+            <div>
+              <input type="button" value="选择多个城市" id="select_currentState" class="profile_select_410 profile_select_normal ">
+              <div class="boxUpDown boxUpDown_410 dn" id="ccccity" >
+              <ul class="cccreset" style="overflow:auto;">
+                <li><a>移动互联网</a></li>
+                <li><a>电子商务</a></li>
+                <li><a>社交</a></li>
+                <li><a>企业服务</a></li>
+                <li><a>O2O</a></li>
+                <li><a>教育</a></li>
+                <li><a>文化艺术</a></li>
+                <li><a>游戏</a></li>
+          
+              </ul>
+            </div>
+              <span>（可以选择多个城市）</span></div>
+            <div class="ccc_cityresult">
+              <ul class="cccclearfix">
+                <li><i ></i>公司所选城市</li>
+                <li><i ></i>公司所选城市</li>
+                <li><i ></i>公司所选城市</li>
+                <li><i ></i>公司所选城市</li>
+              </ul>
+            </div>
+          </div>
+          <h3>行业领域</h3>
+          <div>
+            <input type="button" value="行业领域" class="profile_select_630 profile_select_normal ccc_select1">
+            <div class="boxUpDown boxUpDown_630 dn" id="cccfinancialindustry" >
+              <ul class="cccreset" style="overflow:auto;">
+                <li><a>移动互联网</a></li>
+                <li><a>电子商务</a></li>
+                <li><a>社交</a></li>
+                <li><a>企业服务</a></li>
+                <li><a>O2O</a></li>
+                <li><a>教育</a></li>
+                <li><a>文化艺术</a></li>
+                <li><a>游戏</a></li>
+          
+              </ul>
+            </div>
+          </div>
+          <h3>公司规模</h3>
+          <div>
+            <input type="button" value="公司规模" class="profile_select_630 profile_select_normal ccc_select1">
+            <div class="boxUpDown boxUpDown_630 dn">
+              <ul >
+                <li><a>少于15人</a></li>
+                <li><a>15-50人</a></li>
+                <li><a>50-150人</a></li>
+                <li><a>150-500人</a></li>
+                <li><a>500-2000人</a></li>
+                <li><a>2000人以上</a></li>
+              </ul>
+            </div>
+          </div>
+          <h3>发展阶段</h3>
+          <ul class="s_radio_ex cccclearfix ">
+            <li class="current">未融资<em></em></li>
+            <li>天使轮</li>
+            <li>A轮</li>
+            <li>B轮</li>
+            <li>C轮</li>
+            <li>D轮及以上</li>
+            <li>上市公司</li>
+          </ul>
+          <h3>投资机构</h3>
+          <ul id="stagesList" >
+            <li>
+              <input type="button" class="profile_select_230 profile_select_normal ccc_select1" value="请选择发展阶段">
+              <div  class="boxUpDown boxUpDown_230 dn ">
+                <ul >
+                  <li><a >天使轮</a></li>
+                  <li><a >A轮</a></li>
+                  <li><a >B轮</a></li>
+                  <li><a >C轮</a></li>
+                  <li><a >D轮及以上</a></li>
+                  <li><a >上市公司</a></li>
+                </ul>
+              </div>
+              <input type="text" placeholder="请输入投资机构，如真格基金，创新工场" name="stageorg">
+            </li>
+            <li>
+              <input type="button" class="profile_select_230 profile_select_normal ccc_select1" value="请选择发展阶段">
+              <div  class="boxUpDown boxUpDown_230 dn ">
+                <ul >
+                  <li><a >天使轮</a></li>
+                  <li><a >A轮</a></li>
+                  <li><a >B轮</a></li>
+                  <li><a >C轮</a></li>
+                  <li><a >D轮及以上</a></li>
+                  <li><a >上市公司</a></li>
+                </ul>
+              </div>
+              <input type="text" placeholder="请输入投资机构，如真格基金，创新工场" name="stageorg">
+            </li>
+            <li>
+              <input type="button" class="profile_select_230 profile_select_normal ccc_select1" value="请选择发展阶段">
+              <div  class="boxUpDown boxUpDown_230 dn ">
+                <ul >
+                  <li><a >天使轮</a></li>
+                  <li><a >A轮</a></li>
+                  <li><a >B轮</a></li>
+                  <li><a >C轮</a></li>
+                  <li><a >D轮及以上</a></li>
+                  <li><a >上市公司</a></li>
+                </ul>
+              </div>
+              <input type="text" placeholder="请输入投资机构，如真格基金，创新工场" name="stageorg">
+            </li>
+          </ul>
+          <h3>一句话介绍</h3>
+          <input type="text" placeholder="一句话概括公司亮点，如公司愿景、领导团队等，限50字" maxlength="50" name="temptation" id="temptation">
+          <input type="submit" value="保存，下一步"  class="cccbtn60 cccfr" id="cccstepbtn">
+          <div class="clear"></div>
+        </div>
+      </form>
+    </div>
+    <!--创建公司第一步结束--> 
+    
+  </div>
+</div>
+<!-- end #container -->
+<div id="cccfooter">
+  <div class="cccwrapper">
+    <div class="ccccopyright">Copyright © 2014-2015 jinrongma.com All Rights Reserved　金融妈</div>
+    <a href="#" target="_blank">关于金融妈<i></i></a> <a href="#" target="_blank" rel="nofollow">联系我们<i></i></a> <a href="#" target="_blank" rel="nofollow">伯东与千里马</a> </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,192 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="{% static 'css/stylecc.css' %}" rel="stylesheet" type="text/css" />
+<!--[if IE 6]>
+<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a.js"></script>
+<script type="text/javascript">
+	DD_belatedPNG.fix('*');
+</script>
+<![endif]-->
+
+</head>
+
+<body>
+<div id="cccheader">
+  <div class="ccchuany">
+    <p>你好 ，xxxxxx@163.com <a href="#">帮助</a></p>
+  </div>
+  <div class="cccwrapper"> <a href="" class="logo"> <img src="{% static 'images/logob.png' %}" width="256" height="63" alt="金融妈 jinrongma.com" /> </a>
+    <ul class="cccreset" id="navcccheader">
+      <li><a href="#">首页</a></li>
+      <li><a href="#" >招聘</a><i></i></li>
+      <li><a href="#" target="_blank">每日要闻</a><i></i></li>
+      <li><a href="#" rel="nofollow">金融社区</a></li>
+    </ul>
+    <div id="ccclogin"  > <a href="#" target="_blank" class="ccczc">注册</a> <a href="#" class="cccdn">登录</a> </div>
+  </div>
+</div>
+<!-- end #header --> 
+
+<!--左右布局结构开始-->
+<div class="c_personset">
+  <div class="c_personset_1 fl">
+    <div class="guidetitle"><span>个人信息</span></div>
+    <div class="c_pprofile gerenxinxi">
+      <dl class="mybasic">
+        <dd>
+          <form id="profileForm">
+            <table>
+              <tr>
+                <td width="19" valign="top"><span class="redstar">*</span></td>
+                <td width="194"><input type="text" id="name" name="name" placeholder="昵称" /></td>
+                <td width="19" valign="top"></td>
+                <td width="228"><ul class="profile_radio cccclearfix cccreset">
+                    <li> <a href="#">男</a> </li>
+                    <li > <a href="#" class="current">女</a> </li>
+                  </ul></td>
+              </tr>
+              <tr>
+                <td valign="top"><span class="redstar">*</span></td>
+                <td colspan="3"><div class="cccfl" >
+                    <input type="button" class="profile_select_133 profile_select_normal" id="select_topDegree" value="请选择"  />
+                    <div class="boxUpDown boxUpDown_133 dn" style="*left:21px;*top:121px;">
+                      <ul>
+                        <li><a>四川</a></li>
+                        <li><a>北京</a></li>
+                        <li><a>黑龙江</a></li>
+                        <li><a>内蒙古</a></li>
+                        <li><a>广东</a></li>
+                        <li><a>广西</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div  class="cccfl" >
+                    <input type="button" class="profile_select_133 profile_select_normal" id="select_workyear" value="城市" />
+                    <div class="boxUpDown boxUpDown_133 dn" style="*left:163px;*top:121px;">
+                      <ul>
+                        <li><a>四川</a></li>
+                        <li><a>北京</a></li>
+                        <li><a>黑龙江</a></li>
+                        <li><a>内蒙古</a></li>
+                        <li><a>广东</a></li>
+                        <li><a>广西</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div  class="cccfl">
+                    <input type="button" class="profile_select_133 profile_select_normal" id="select_workyear" value="区域" />
+                    <div class="boxUpDown boxUpDown_133 dn" style="*left:305px;*top:121px;">
+                      <ul>
+                        <li><a>四川</a></li>
+                        <li><a>北京</a></li>
+                        <li><a>黑龙江</a></li>
+                        <li><a>内蒙古</a></li>
+                        <li><a>广东</a></li>
+                        <li><a>广西</a></li>
+                      </ul>
+                    </div>
+                    <strong></strong></div>
+                  <div class="clear"></div></td>
+              </tr>
+              <tr>
+                <td valign="top"><span class="redstar">*</span></td>
+                <td colspan="3"><div class="jobSearch"><a href="#" class="current">是否找工作</a></div>
+                    <div class="Jobinformation">
+                      <table>
+                        <tr>
+                          <td valign="top"><span class="redstar">*</span></td>
+                          <td colspan="3"><input type="text" placeholder="姓名" id="" name="tel"></td>
+                        </tr>
+                        <tr>
+                          <td valign="top"><span class="redstar">*</span></td>
+                          <td><input type="hidden" id="topDegree" value="" name="topDegree">
+                            <input type="button" value="最高学历" id="select_topDegree" class="profile_select_190 profile_select_normal">
+                            <div class="boxUpDown boxUpDown_190 dn" style="*left:21px;*top:112px;">
+                              <ul>
+                                <li><a >大专</a></li>
+                        <li><a >本科</a></li>
+                        <li><a >硕士</a></li>
+                        <li><a >博士</a></li>
+                        <li><a >其他</a></li>
+                              </ul>
+                            </div></td>
+                          <td valign="top"><span class="redstar">*</span></td>
+                          <td><input type="hidden" id="workyear" value="" name="workyear">
+                            <input type="button" value="工作年限" id="select_workyear" class="profile_select_190 profile_select_normal">
+                            <div class="boxUpDown boxUpDown_190" style="*left:242px;*top:112px;">
+                              <ul>
+                               <li><a >应届毕业生</a></li>
+                        <li><a >1年</a></li>
+                        <li><a >2年</a></li>
+                        <li><a >3年</a></li>
+                        <li><a >4年</a></li>
+                        <li><a >5年</a></li>
+                        <li><a >6年</a></li>
+                        <li><a >7年</a></li>
+                        <li><a >8年</a></li>
+                        <li><a >9年</a></li>
+                        <li><a >10年</a></li>
+                        <li><a >10年以上</a></li>
+                              </ul>
+                            </div></td>
+                        </tr>
+                        <tr>
+                          <td valign="top"><span class="redstar">*</span></td>
+                          <td colspan="3"><input type="text" placeholder="手机号码" id="tel" name="tel"></td>
+                        </tr>
+                        <tr>
+                          <td valign="top"><span class="redstar">*</span></td>
+                          <td colspan="3"><input type="text" placeholder="邮箱（接收工作订阅消息）" id="email" name="email"></td>
+                        </tr>
+                      </table>
+                    </div>
+                  </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td colspan="3"><input type="submit" id=""  value="保 存" class="cccbtn50" /></td>
+              </tr>
+            </table>
+          </form>
+          <!--end #profileForm-->
+          <div class="new_portrait">
+            <div id="portraitNo" class="portrait_upload"> <span>上传自己的头像</span> </div>
+            <div  id="portraitShow" class="portraitShow dn"> <img src="" alt="" width="120" height="120" /> <span>更换头像</span> </div>
+            <input type="file" class="myfiles" id="headPic" name="headPic" onchange="img_check(this,'http://www.lagou.com/resume/uploadPhoto.json','headPic');" title="支持jpg、jpeg、gif、png格式，文件小于5M" value="" />
+            <!-- <input type="hidden" id="headPicHidden" /> --> 
+            <em> 尺寸：120*120px <br />
+            大小：小于5M </em> <span class="error" id="headPic_error" style="display:none;"></span> </div>
+          <!--end .new_portrait-->
+          <input type="hidden" value="0" id="pageType" />
+        </dd>
+      </dl>
+    </div>
+  </div>
+  <!--左边框部分结束-->
+  <div class="c_personset_r fr">
+    <div class="c_choose">
+      <h2>选择金融妈的<span>理由</span></h2>
+      <div class="c_chooseinfo">
+        <p>选择金融妈的理由选择金融妈的理由选择金融妈的理由选择金融妈的理由选择金融妈的理由选择金融妈的理由选择金融妈的理由选择金融妈的理由选择金融妈的理由选择金融妈的理由选择金融妈的理由选择金融妈的理由选择金融妈的理由</p>
+        <p>选择金融妈的理由选择金融妈的理由选择金融妈的理由选择金融妈的理由选择金融妈的理由选择金融妈的理由选择金融妈的理由选择金融妈的理由选择金融妈的理由选择金融妈的理由选择金融妈的理由选择金融妈的理由选择金融妈的理由</p>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <!--右边结束--> 
+  
+</div>
+<!-- end #container --> 
+
+<!--版权信息-->
+<div id="cccfooter">
+  <div class="cccwrapper">
+    <div class="ccccopyright">Copyright © 2014-2015 jinrongma.com All Rights Reserved　金融妈</div>
+    <a href="#" target="_blank">关于金融妈<i></i></a> <a href="#" target="_blank" rel="nofollow">联系我们<i></i></a> <a href="#" target="_blank" rel="nofollow">伯东与千里马</a> </div>
+</div>
+</body>
+</html>

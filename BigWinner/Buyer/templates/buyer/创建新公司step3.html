@@ -1,0 +1,97 @@
+{% load static %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="{% static 'css/stylecc.css' %}" rel="stylesheet" type="text/css" />
+</head>
+<!--[if IE 6]>
+<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a.js"></script>
+<script type="text/javascript">
+	DD_belatedPNG.fix('*');
+</script>
+<![endif]-->
+<body>
+<div id="cccheader">
+  <div class="ccchuany">
+    <p>你好 ，xxxxxx@163.com <a href="#">帮助</a></p>
+  </div>
+  <div class="cccwrapper"> <a href="" class="logo"> <img src="{% static 'images/logob.png' %}" width="256" height="63" alt="金融妈 jinrongma.com" /> </a>
+    <ul class="cccreset" id="navcccheader">
+      <li><a href="#">首页</a></li>
+      <li><a href="#" >招聘</a><i></i></li>
+      <li><a href="#" target="_blank">每日要闻</a><i></i></li>
+      <li><a href="#" rel="nofollow">金融社区</a></li>
+    </ul>
+    <div id="ccclogin"  > <a href="#" target="_blank" class="ccczc">注册</a> <a href="#" class="cccdn">登录</a> </div>
+  </div>
+</div>
+<!-- end #header -->
+
+<div id="container">
+  <div class="content_mid"> 
+    <!--创建新公司-->
+    <h2><em></em>填写公司信息</h2>
+    <div class="Create_newcompany">
+      <form class="stepForm" id="stepForm03">
+        <div class="ccc_text_1">展示强劲的管理团队，让求职者跟随而来吧！</div>
+        <div class="ccc_pic_1"><img src="{% static 'images/step3.png' %}" width="795" height="58" /></div>
+        <div class="ccc_box_720">
+          <div class="cccformWrapper">
+            <div class="new_portrait">
+              <div class="portrait_upload" id="portraitNo"> <span>上传自己的头像</span> </div>
+              <div class="portraitShow dn" id="portraitShow"> <img width="120" height="120" alt="" src=""> <span>更换头像</span> </div>
+              <input type="file" value="" title="支持jpg、jpeg、gif、png格式，文件小于5M" onchange="img_check(this,'http://www.lagou.com/resume/uploadPhoto.json','headPic');" name="headPic" id="headPic" class="myfiles">
+              <!-- <input type="hidden" id="headPicHidden" /> --> 
+              <em> 尺寸：120*120px <br>
+              大小：小于5M </em> <span style="display:none;" id="headPic_error" class="error"></span> </div>
+            <h3 >管理人姓名<span>
+              <input name="" type="radio" value="" />
+              创始人</span><span>
+              <input name="" type="radio" value="" />
+              创始团队成员</span></h3>
+            <input type="text" placeholder="请输入创始人姓名" class="ccc_inputsmall" >
+            <h3>当前职位</h3>
+            <input type="text" placeholder="请输入当前职位，如：创始人兼CEO" class="ccc_inputsmall" >
+            <h3>新浪微博</h3>
+            <input type="text" placeholder="请输入管理人新浪微博地址" >
+            <div class="uploadlogo">
+              <ul>
+                <li>
+                  <h3>微信二维码</h3>
+                  <div class="ccc_logo_pos"> <a href="#">
+                    <div id="ccc_logoNo"> <span>上传二维码</span> <br>
+                      尺寸：200*200px <br>
+                      大小：小于2M </div>
+                    </a> </div>
+                </li>
+              </ul>
+              <div class="clear"></div>
+            </div>
+            <h3>管理人简介</h3>
+            <textarea placeholder="请输入该创始人的个人履历等，建议按照时间倒序分条展示" maxlength="1000" name="leaderInfos[0].remark" id="description0"></textarea>
+            <div class="cccword_count">你还可以输入<span>1000</span>字</div>
+          </div>
+          <a class="cccaddMember"  href="#">继续添加管理团队</a>
+          <input type="submit" value="保存，下一步"  class="cccbtn60 cccfr" id="cccstepbtn">
+          <input type="submit" value="上一步"  class="cccfr" id="cccpreviousbtn">
+           <div class="clear"></div>
+          <a class="cccbtn_cancel cccfr" href="#">跳过</a>
+          <div class="clear"></div>
+        </div>
+      </form>
+    </div>
+    <!--创建公司第一步结束--> 
+    
+  </div>
+</div>
+<!-- end #container -->
+<div id="cccfooter">
+  <div class="cccwrapper">
+    <div class="ccccopyright">Copyright © 2014-2015 jinrongma.com All Rights Reserved　金融妈</div>
+    <a href="#" target="_blank">关于金融妈<i></i></a> <a href="#" target="_blank" rel="nofollow">联系我们<i></i></a> <a href="#" target="_blank" rel="nofollow">伯东与千里马</a> </div>
+</div>
+</body>
+</html>

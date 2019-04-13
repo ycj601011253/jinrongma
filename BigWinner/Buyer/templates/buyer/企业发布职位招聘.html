@@ -1,0 +1,669 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="{% static 'css/stylecc.css' %}" rel="stylesheet" type="text/css" />
+<link href="{% static 'css/ui.css' %}" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{% static 'js/jquery1.42.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.SuperSlide.2.1.1.js' %}"></script>
+
+<!--[if IE 6]>
+<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a.js"></script>
+<script type="text/javascript">
+	DD_belatedPNG.fix('*');
+</script>
+<![endif]-->
+</head>
+
+<body>
+<div id="cccheader">
+  <div class="ccchuany">
+    <p>你好 ，xxxxxx@163.com <a href="/buyer/">帮助</a></p>
+  </div>
+  <div class="cccwrapper"> <a href="/buyer/index/" class="logo"> <img src="{% static 'images/logob.png' %}" width="211" height="53" alt="金融妈 jinrongma.com" /> </a>
+    <ul class="cccreset" id="navcccheader">
+      <li><a href="/buyer/index/">首页</a></li>
+      <li><a href="/buyer/company_public_job/">招聘</a><i></i></li>
+      <li><a href="/buyer/index/">每日要闻</a><i></i></li>
+      <li><a href="/buyer/index/" rel="nofollow">金融社区</a></li>
+    </ul>
+    <div id="ccclogin"  > <a href="/buyer/register/" target="_blank" class="ccczc">注册</a> <a href="/buyer/login/" class="cccdn">登录</a> </div>
+  </div>
+</div>
+<!-- end #header --> 
+
+<!--左右布局结构开始-->
+<div class="ccc_container">
+  <div class="ccc_content fl">
+    <div class="guidetitle"><span>发布新职位</span></div>
+    <form id="cccjobForm">
+      <table class="btm">
+        <tbody>
+          <tr>
+            <td  width="25"><span class="redstar">*</span></td>
+            <td width="85">职位类别</td>
+            <td><input type="button" value="请选择职位列别" id="select_workyear" class="profile_select_380 profile_select_normal" style="color:#999">
+              <div id="cccbox_job" class="dn">
+                <dl>
+                  <dt>技术</dt>
+                  <dd>
+                    <ul class="reset job_main">
+                      <li> <span>后端开发</span>
+                        <ul class="reset job_sub dn">
+                          <li>Java</li>
+                          <li>C++</li>
+                          <li>PHP</li>
+                          <li>数据挖掘</li>
+                          <li>C</li>
+                          <li>C#</li>
+                          <li>.NET</li>
+                          <li>Hadoop</li>
+                          <li>Python</li>
+                          <li>Delphi</li>
+                          <li>VB</li>
+                          <li>Perl</li>
+                          <li>Ruby</li>
+                          <li>Node.js</li>
+                        </ul>
+                      </li>
+                      <li> <span>移动开发</span>
+                        <ul class="reset job_sub dn" style="margin-left: -160px;">
+                          <li>HTML5</li>
+                          <li>Android</li>
+                          <li>iOS</li>
+                          <li>WP</li>
+                        </ul>
+                      </li>
+                      <li> <span>前端开发</span>
+                        <ul class="reset job_sub dn" style="margin-left: -310px;">
+                          <li>web前端</li>
+                          <li>Flash</li>
+                          <li>html5</li>
+                          <li>JavaScript</li>
+                          <li>U3D</li>
+                          <li>COCOS2D-X</li>
+                        </ul>
+                      </li>
+                      <li> <span>测试</span>
+                        <ul class="reset job_sub dn">
+                          <li>测试工程师</li>
+                          <li>自动化测试</li>
+                          <li>功能测试</li>
+                          <li>性能测试</li>
+                          <li>测试开发</li>
+                        </ul>
+                      </li>
+                      <li> <span>运维</span>
+                        <ul class="reset job_sub dn" style="margin-left: -160px;">
+                          <li>运维工程师</li>
+                          <li>运维开发工程师</li>
+                          <li>网络工程师</li>
+                          <li>系统工程师</li>
+                          <li>IT支持</li>
+                        </ul>
+                      </li>
+                      <li> <span>DBA</span>
+                        <ul class="reset job_sub dn" style="margin-left: -310px;">
+                          <li>MySQL</li>
+                          <li>SQLServer</li>
+                          <li>Oracle</li>
+                          <li>DB2</li>
+                          <li>MongoDB</li>
+                        </ul>
+                      </li>
+                      <li> <span>项目管理</span>
+                        <ul class="reset job_sub dn">
+                          <li>项目经理</li>
+                        </ul>
+                      </li>
+                      <li> <span>高端技术职位</span>
+                        <ul class="reset job_sub dn" style="margin-left: -160px;">
+                          <li>技术经理</li>
+                          <li>技术总监</li>
+                          <li>测试经理</li>
+                          <li>架构师</li>
+                          <li>CTO</li>
+                          <li>运维总监</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>产品</dt>
+                  <dd>
+                    <ul class="reset job_main">
+                      <li> <span>产品经理</span>
+                        <ul class="reset job_sub dn">
+                          <li>产品经理</li>
+                          <li>网页产品经理</li>
+                          <li>移动产品经理</li>
+                          <li>产品助理</li>
+                          <li>数据产品经理</li>
+                          <li>电商产品经理</li>
+                          <li>游戏策划</li>
+                        </ul>
+                      </li>
+                      <li> <span>产品设计师</span>
+                        <ul class="reset job_sub dn" style="margin-left: -160px;">
+                          <li>网页产品设计师</li>
+                          <li>无线产品设计师</li>
+                        </ul>
+                      </li>
+                      <li> <span>高端产品职位</span>
+                        <ul class="reset job_sub dn" style="margin-left: -310px;">
+                          <li>产品部经理</li>
+                          <li>产品总监</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>设计</dt>
+                  <dd>
+                    <ul class="reset job_main">
+                      <li> <span>视觉设计</span>
+                        <ul class="reset job_sub dn">
+                          <li>视觉设计师</li>
+                          <li>网页设计师</li>
+                          <li>Flash设计师</li>
+                          <li>APP设计师</li>
+                          <li>UI设计师</li>
+                          <li>平面设计师</li>
+                          <li>美术设计师（2D/3D）</li>
+                          <li>广告设计师</li>
+                          <li>多媒体设计师</li>
+                          <li>原画师</li>
+                          <li>游戏特效</li>
+                          <li>游戏界面设计师</li>
+                          <li>游戏场景</li>
+                          <li>游戏角色</li>
+                          <li>游戏动作</li>
+                        </ul>
+                      </li>
+                      <li> <span>交互设计</span>
+                        <ul class="reset job_sub dn" style="margin-left: -160px;">
+                          <li>交互设计师</li>
+                          <li>无线交互设计师</li>
+                          <li>网页交互设计师</li>
+                          <li>硬件交互设计师</li>
+                        </ul>
+                      </li>
+                      <li> <span>用户研究</span>
+                        <ul class="reset job_sub dn" style="margin-left: -310px;">
+                          <li>数据分析师</li>
+                          <li>用户研究员</li>
+                          <li>游戏数值策划</li>
+                        </ul>
+                      </li>
+                      <li> <span>高端设计职位</span>
+                        <ul class="reset job_sub dn">
+                          <li>设计经理/主管</li>
+                          <li>设计总监</li>
+                          <li>视觉设计经理/主管</li>
+                          <li>视觉设计总监</li>
+                          <li>交互设计经理/主管</li>
+                          <li>交互设计总监</li>
+                          <li>用户研究经理/主管</li>
+                          <li>用户研究总监</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>运营</dt>
+                  <dd>
+                    <ul class="reset job_main">
+                      <li> <span>运营</span>
+                        <ul class="reset job_sub dn">
+                          <li>用户运营</li>
+                          <li>产品运营</li>
+                          <li>数据运营</li>
+                          <li>内容运营</li>
+                          <li>活动运营</li>
+                          <li>商家运营</li>
+                          <li>品类运营</li>
+                          <li>游戏运营</li>
+                          <li>网络推广</li>
+                        </ul>
+                      </li>
+                      <li> <span>编辑</span>
+                        <ul class="reset job_sub dn" style="margin-left: -160px;">
+                          <li>副主编</li>
+                          <li>内容编辑</li>
+                        </ul>
+                      </li>
+                      <li> <span>客服</span>
+                        <ul class="reset job_sub dn" style="margin-left: -310px;">
+                          <li>售前咨询</li>
+                          <li>售后客服</li>
+                        </ul>
+                      </li>
+                      <li> <span>高端运营职位</span>
+                        <ul class="reset job_sub dn">
+                          <li>主编</li>
+                          <li>运营总监</li>
+                          <li>COO</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>市场与销售</dt>
+                  <dd>
+                    <ul class="reset job_main">
+                      <li> <span>市场/营销</span>
+                        <ul class="reset job_sub dn">
+                          <li>市场营销</li>
+                          <li>市场策划</li>
+                          <li>市场顾问</li>
+                          <li>市场推广</li>
+                          <li>SEO</li>
+                          <li>SEM</li>
+                          <li>商务渠道</li>
+                          <li>商业数据分析</li>
+                          <li>活动策划</li>
+                        </ul>
+                      </li>
+                      <li> <span>公关</span>
+                        <ul class="reset job_sub dn" style="margin-left: -160px;">
+                          <li>媒介经理</li>
+                          <li>广告协调</li>
+                          <li>品牌公关</li>
+                        </ul>
+                      </li>
+                      <li> <span>销售</span>
+                        <ul class="reset job_sub dn" style="margin-left: -310px;">
+                          <li>销售专员</li>
+                          <li>销售经理</li>
+                          <li>客户代表</li>
+                          <li>大客户代表</li>
+                          <li>BD经理</li>
+                          <li>商务渠道</li>
+                          <li>渠道销售</li>
+                          <li>代理商销售</li>
+                        </ul>
+                      </li>
+                      <li> <span>高端市场职位</span>
+                        <ul class="reset job_sub dn">
+                          <li>市场总监</li>
+                          <li>销售总监</li>
+                          <li>商务总监</li>
+                          <li>CMO</li>
+                          <li>公关总监</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>职能</dt>
+                  <dd>
+                    <ul class="reset job_main">
+                      <li> <span>人力资源</span>
+                        <ul class="reset job_sub dn">
+                          <li>人力资源</li>
+                          <li>招聘</li>
+                          <li>HRBP</li>
+                          <li>人事/HR</li>
+                          <li>培训经理</li>
+                          <li>薪资福利经理</li>
+                          <li>绩效考核经理</li>
+                        </ul>
+                      </li>
+                      <li> <span>行政</span>
+                        <ul class="reset job_sub dn" style="margin-left: -160px;">
+                          <li>助理</li>
+                          <li>前台</li>
+                          <li>法务</li>
+                          <li>行政</li>
+                        </ul>
+                      </li>
+                      <li> <span>财务</span>
+                        <ul class="reset job_sub dn" style="margin-left: -310px;">
+                          <li>会计</li>
+                          <li>出纳</li>
+                          <li>财务</li>
+                        </ul>
+                      </li>
+                      <li> <span>高端职能职位</span>
+                        <ul class="reset job_sub dn">
+                          <li>行政总监/经理</li>
+                          <li>财务总监/经理</li>
+                          <li>HRD/HRM</li>
+                          <li>CFO</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div></td>
+          </tr>
+          <tr>
+            <td  width="25"><span class="redstar">*</span></td>
+            <td width="85">职位类别</td>
+            <td><input type="text" placeholder="请输入职位名称，如：产品经理" value="" name="positionName" ></td>
+          </tr>
+          <tr>
+            <td  width="25"><span class="redstar">*</span></td>
+            <td width="85">职位名称</td>
+            <td><div id="cccbumen">
+                <input type="text" placeholder="请输入所属部门" value="" name="department">
+                <a href="#">查找公司已有部门</a> </div>
+                  <div class="clear"></div>
+                <div id="cccfindbumen">
+                <ul>
+                  <li><a>人事部门</a></li>
+                  <li><a>人事部门</a></li>
+                  <li><a>人事部门</a></li>
+                  <li><a>人事部门</a></li>
+                  <li><a>人事部门</a></li>
+                </ul>
+              </div>
+              <div class="clear"></div>
+              <div class="cccbumeninfo">
+                <ul>
+                  <li><a>人事部门</a></li>
+                  <li><a>人事部门</a></li>
+                  <li><a>人事部门</a></li>
+                  <li><a>人事部门</a></li>
+                  <li><a>人事部门</a></li>
+                </ul>
+              </div></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="btm">
+        <tbody>
+          <tr>
+            <td  width="25"><span class="redstar">*</span></td>
+            <td width="85">工作性质</td>
+            <td><ul class="profile_radio cccclearfix cccreset">
+                <li> <a href="#">全职</a> </li>
+                <li > <a href="#" class="current">兼职</a> </li>
+                <li > <a href="#">实习</a> </li>
+              </ul></td>
+          </tr>
+          <tr>
+            <td  width="25"><span class="redstar">*</span></td>
+            <td width="85">月薪范围</td>
+            <td><div class="salary_range">
+                <div class="fl">
+                  <input type="text" placeholder="最低月薪" value="" name="salaryMin">
+                  <span>k</span> </div>
+                <div class="fl">
+                  <input type="text" placeholder="最高月薪" value=""  name="salaryMax">
+                  <span>k</span> </div>
+                <span>只能输入整数，如：9</span> </div></td>
+          </tr>
+          <tr>
+            <td  width="25"><span class="redstar">*</span></td>
+            <td width="85">工作城市</td>
+            <td><div class="cccworkcity">
+                <div class="fl">
+                  <input type="button" value="8年" id="select_workyear" class="profile_select_163 profile_select_normal select_focus" style="color:#999">
+                  <div  id="cccbox_workCity"  class="dn">
+                      <dl>
+                        <dt>热门城市</dt>
+                        <dd> <span>北京</span> <span>上海</span> <span>广州</span> <span>深圳</span> <span>成都</span> <span>杭州</span> </dd>
+                      </dl>
+                      <dl>
+                        <dt>ABCDEF</dt>
+                        <dd> <span>北京</span> <span>长春</span> <span>成都</span> <span>重庆</span> <span>长沙</span> <span>常州</span> <span>东莞</span> <span>大连</span> <span>佛山</span> <span>福州</span> </dd>
+                      </dl>
+                      <dl>
+                        <dt>GHIJ</dt>
+                        <dd> <span>贵阳</span> <span>广州</span> <span>哈尔滨</span> <span>合肥</span> <span>海口</span> <span>杭州</span> <span>惠州</span> <span>金华</span> <span>济南</span> <span>嘉兴</span> </dd>
+                      </dl>
+                      <dl>
+                        <dt>KLMN</dt>
+                        <dd> <span>昆明</span> <span>宁波</span> <span>南昌</span> <span>南京</span> <span>南宁</span> <span>南通</span> </dd>
+                      </dl>
+                      <dl>
+                        <dt>OPQR</dt>
+                        <dd> <span>青岛</span> <span>泉州</span> </dd>
+                      </dl>
+                      <dl>
+                        <dt>STUV</dt>
+                        <dd> <span>上海</span> <span>石家庄</span> <span>沈阳</span> <span>深圳</span> <span>苏州</span> <span>天津</span> <span>太原</span> </dd>
+                      </dl>
+                      <dl>
+                        <dt>WXYZ</dt>
+                        <dd> <span>武汉</span> <span>无锡</span> <span>温州</span> <span>西安</span> <span>厦门</span> <span>烟台</span> <span>珠海</span> <span>中山</span> <span>郑州</span> </dd>
+                      </dl>
+                    </div>
+                </div>
+                <div class="fl">
+                  <input type="text" placeholder="请输入工作城市，如：北京" value="重庆" name="workAddress" >
+                  
+                </div>
+                <div class="fl">
+                  <input type="button" value="+" class="ccc_addbtn">
+                </div>
+                <div class="clear"></div>
+              </div>
+              <div class="cccworkcity">
+                <div class="fl">
+                  <input type="button" value="8年" id="select_workyear" class="profile_select_163 profile_select_normal" style="color:#999">
+                </div>
+                <div class="fl">
+                  <input type="text" placeholder="请输入工作城市，如：北京" value="重庆" name="workAddress" >
+                </div>
+                <div class="fl">
+                  <input type="button" value="-" class="ccc_addbtn">
+                </div>
+                <div class="clear"></div>
+              </div></td>
+          </tr>
+        <table class="btm">
+          <tbody>
+            <tr>
+              <td  width="25"><span class="redstar">*</span></td>
+              <td width="85">工作经验</td>
+              <td><input type="button" value="请选择工作经" id="select_workyear" class="profile_select_380 profile_select_normal" style="color:#999">
+                <div class="boxUpDown boxUpDown_380 dn" >
+                  <ul>
+                    <li><a>不限</a> </li>
+                    <li><a> 应届毕业生</a> </li>
+                    <li><a> 1年以下</a> </li>
+                    <li> <a>1-3年</a> </li>
+                    <li><a> 3-5年</a> </li>
+                    <li> <a>5-10年</a> </li>
+                    <li><a> 10年以上</a> </li>
+                  </ul>
+                </div></td>
+            </tr>
+            <tr>
+              <td  width="25"><span class="redstar">*</span></td>
+              <td width="85">学历要求</td>
+              <td><input type="button" value="请选择学历要求" class="profile_select_380 profile_select_normal" style="color:#999">
+                <div class="boxUpDown boxUpDown_380 dn" >
+                  <ul>
+                    <li><a>不限</a> </li>
+                    <li><a>大专</a> </li>
+                    <li><a>本科</a> </li>
+                    <li><a>研究生</a> </li>
+                    <li><a>博士</a> </li>
+                  </ul>
+                </div></td>
+            </tr>
+            <tr>
+              <td  width="25"><span class="redstar">*</span></td>
+              <td width="85">优先条件</td>
+              <td><div class="cccslideTxtBox">
+                  <div class="hd"> 
+                    
+                    <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+                    
+                    <ul>
+                      <li>外表</li>
+                      <li>证书</li>
+                      <li>资质</li>
+                      <li>技能</li>
+                    </ul>
+                    <div class="clear"></div>
+                  </div>
+                  <div class="bd">
+                    <ul>
+                      <li><a>萌妹子</a></li>
+                      <li><a>英语八级</a></li>
+                      <li><a>英语八级</a></li>
+                      <li><a>英语八级</a></li>
+                      <li><a>英语八级</a></li>
+                      <li><a>英语八级</a></li>
+                      <li><a>英语八级</a></li>
+                    </ul>
+                    <ul>
+                      <li><a>2</a></li>
+                    </ul>
+                    <ul>
+                      <li><a>3</a></li>
+                    </ul>
+                    <ul>
+                      <li><a>4</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <script type="text/javascript">jQuery(".cccslideTxtBox").slide();</script></td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="btm">
+          <tbody>
+            <tr>
+              <td  width="25"><span class="redstar">*</span></td>
+              <td width="85">职位诱惑</td>
+              <td><input type="text" placeholder="20字描述该职位的吸引力，如：福利待遇、发展前景等" value="" name="positionAdvantage" class="cccinput520"></td>
+            </tr>
+            <tr>
+              <td  width="25"><span class="redstar">*</span></td>
+              <td width="85">职位诱惑</td>
+              <td><span class="cccf14">(建议分条描述工作职责等。请勿输入公司邮箱、联系电话及其他外链，否则将自动删除)</span> <span role="application" aria-labelledby="positionDetail_voice" id="positionDetail_parent" class="mceEditor defaultSkin"><span class="mceVoiceLabel" style="display:none;" id="positionDetail_voice">富文本域</span>
+                <table cellspacing="0" cellpadding="0" role="presentation" id="positionDetail_tbl" class="mceLayout" style="width: 520px; height: 276px;">
+                  <tbody>
+                    <tr role="presentation" class="mceFirst">
+                      <td class="mceToolbar mceLeft mceFirst mceLast" role="toolbar"><div aria-labelledby="positionDetail_toolbargroup_voice" role="group" id="positionDetail_toolbargroup" tabindex="-1"><span role="application"><span style="display:none;" class="mceVoiceLabel" id="positionDetail_toolbargroup_voice">工具栏</span>
+                          <table cellspacing="0" cellpadding="0" align="" tabindex="-1" role="presentation" class="mceToolbar mceToolbarRow1 Enabled" id="positionDetail_toolbar1" aria-disabled="false" aria-pressed="false">
+                            <tbody>
+                              <tr>
+                                <td class="mceToolbarStart mceToolbarStartButton mceFirst"><span><!-- IE --></span></td>
+                                <td style="position: relative"><a title="粗体(Ctrl B)" aria-labelledby="positionDetail_bold_voice" onclick="return false;" onmousedown="return false;" class="mceButton mceButtonEnabled mce_bold" href="javascript:;" id="positionDetail_bold" role="button" tabindex="-1" aria-pressed="false"><span class="mceIcon mce_bold"></span><span id="positionDetail_bold_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">粗体(Ctrl B)</span></a></td>
+                                <td style="position: relative"><a title="斜体(Ctrl I)" aria-labelledby="positionDetail_italic_voice" onclick="return false;" onmousedown="return false;" class="mceButton mceButtonEnabled mce_italic" href="javascript:;" id="positionDetail_italic" role="button" tabindex="-1" aria-pressed="false"><span class="mceIcon mce_italic"></span><span id="positionDetail_italic_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">斜体(Ctrl I)</span></a></td>
+                                <td style="position: relative"><a title="下划线(Ctrl U)" aria-labelledby="positionDetail_underline_voice" onclick="return false;" onmousedown="return false;" class="mceButton mceButtonEnabled mce_underline" href="javascript:;" id="positionDetail_underline" role="button" tabindex="-1"><span class="mceIcon mce_underline"></span><span id="positionDetail_underline_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">下划线(Ctrl U)</span></a></td>
+                                <td style="position: relative"><span tabindex="-1" aria-orientation="vertical" role="separator" class="mceSeparator"></span></td>
+                                <td style="position: relative"><a title="左对齐" aria-labelledby="positionDetail_justifyleft_voice" onclick="return false;" onmousedown="return false;" class="mceButton mceButtonEnabled mce_justifyleft" href="javascript:;" id="positionDetail_justifyleft" role="button" tabindex="-1"><span class="mceIcon mce_justifyleft"></span><span id="positionDetail_justifyleft_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">左对齐</span></a></td>
+                                <td style="position: relative"><a title="居中" aria-labelledby="positionDetail_justifycenter_voice" onclick="return false;" onmousedown="return false;" class="mceButton mceButtonEnabled mce_justifycenter" href="javascript:;" id="positionDetail_justifycenter" role="button" tabindex="-1"><span class="mceIcon mce_justifycenter"></span><span id="positionDetail_justifycenter_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">居中</span></a></td>
+                                <td style="position: relative"><a title="右对齐" aria-labelledby="positionDetail_justifyright_voice" onclick="return false;" onmousedown="return false;" class="mceButton mceButtonEnabled mce_justifyright" href="javascript:;" id="positionDetail_justifyright" role="button" tabindex="-1"><span class="mceIcon mce_justifyright"></span><span id="positionDetail_justifyright_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">右对齐</span></a></td>
+                                <td style="position: relative"><span tabindex="-1" aria-orientation="vertical" role="separator" class="mceSeparator"></span></td>
+                                <td style="position: relative"><a title="项目列表" aria-labelledby="positionDetail_bullist_voice" onclick="return false;" onmousedown="return false;" class="mceButton mceButtonEnabled mce_bullist" href="javascript:;" id="positionDetail_bullist" role="button" tabindex="-1" aria-pressed="false"><span class="mceIcon mce_bullist"></span><span id="positionDetail_bullist_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">项目列表</span></a></td>
+                                <td style="position: relative"><a title="编号列表" aria-labelledby="positionDetail_numlist_voice" onclick="return false;" onmousedown="return false;" class="mceButton mceButtonEnabled mce_numlist" href="javascript:;" id="positionDetail_numlist" role="button" tabindex="-1" aria-pressed="false"><span class="mceIcon mce_numlist"></span><span id="positionDetail_numlist_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">编号列表</span></a></td>
+                                <td style="position: relative"><span tabindex="-1" aria-orientation="vertical" role="separator" class="mceSeparator"></span></td>
+                                <td style="position: relative"><a title="减少缩进" aria-labelledby="positionDetail_outdent_voice" onclick="return false;" onmousedown="return false;" class="mceButton mce_outdent mceButtonDisabled" href="javascript:;" id="positionDetail_outdent" role="button" tabindex="-1" aria-disabled="true"><span class="mceIcon mce_outdent"></span><span id="positionDetail_outdent_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">减少缩进</span></a></td>
+                                <td style="position: relative"><a title="增加缩进" aria-labelledby="positionDetail_indent_voice" onclick="return false;" onmousedown="return false;" class="mceButton mceButtonEnabled mce_indent" href="javascript:;" id="positionDetail_indent" role="button" tabindex="-1"><span class="mceIcon mce_indent"></span><span id="positionDetail_indent_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">增加缩进</span></a></td>
+                                <td style="position: relative"><span tabindex="-1" aria-orientation="vertical" role="separator" class="mceSeparator"></span></td>
+                                <td style="position: relative"><a title="撤销 (Ctrl Z)" aria-labelledby="positionDetail_undo_voice" onclick="return false;" onmousedown="return false;" class="mceButton mce_undo mceButtonEnabled" href="javascript:;" id="positionDetail_undo" role="button" tabindex="-1" aria-disabled="false"><span class="mceIcon mce_undo"></span><span id="positionDetail_undo_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">撤销 (Ctrl Z)</span></a></td>
+                                <td style="position: relative"><a title="恢复 (Ctrl Y)" aria-labelledby="positionDetail_redo_voice" onclick="return false;" onmousedown="return false;" class="mceButton mce_redo mceButtonDisabled" href="javascript:;" id="positionDetail_redo" role="button" tabindex="-1" aria-disabled="true"><span class="mceIcon mce_redo"></span><span id="positionDetail_redo_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">恢复 (Ctrl Y)</span></a></td>
+                                <td style="position: relative"><span tabindex="-1" aria-orientation="vertical" role="separator" class="mceSeparator"></span></td>
+                                <td style="position: relative"><a title="插入/编辑 超链接" aria-labelledby="positionDetail_link_voice" onclick="return false;" onmousedown="return false;" class="mceButton mce_link mceButtonDisabled" href="javascript:;" id="positionDetail_link" role="button" tabindex="-1" aria-disabled="true"><span class="mceIcon mce_link"></span><span id="positionDetail_link_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">插入/编辑 超链接</span></a></td>
+                                <td style="position: relative"><a title="取消超链接" aria-labelledby="positionDetail_unlink_voice" onclick="return false;" onmousedown="return false;" class="mceButton mce_unlink mceButtonDisabled" href="javascript:;" id="positionDetail_unlink" role="button" tabindex="-1" aria-disabled="true"><span class="mceIcon mce_unlink"></span><span id="positionDetail_unlink_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">取消超链接</span></a></td>
+                                <td style="position: relative"><span tabindex="-1" aria-orientation="vertical" role="separator" class="mceSeparator"></span></td>
+                                <td style="position: relative"><a title="插入水平线" aria-labelledby="positionDetail_hr_voice" onclick="return false;" onmousedown="return false;" class="mceButton mceButtonEnabled mce_hr" href="javascript:;" id="positionDetail_hr" role="button" tabindex="-1"><span class="mceIcon mce_hr"></span><span id="positionDetail_hr_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">插入水平线</span></a></td>
+                                <td style="position: relative"><a title="切换全屏模式" aria-labelledby="positionDetail_fullscreen_voice" onclick="return false;" onmousedown="return false;" class="mceButton mceButtonEnabled mce_fullscreen" href="javascript:;" id="positionDetail_fullscreen" role="button" tabindex="-1" aria-pressed="false"><span class="mceIcon mce_fullscreen"></span><span id="positionDetail_fullscreen_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">切换全屏模式</span></a></td>
+                                <td style="position: relative"><a title="插入/编辑 图片" aria-labelledby="positionDetail_image_voice" onclick="return false;" onmousedown="return false;" class="mceButton mceButtonEnabled mce_image" href="javascript:;" id="positionDetail_image" role="button" tabindex="-1"><span class="mceIcon mce_image"></span><span id="positionDetail_image_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">插入/编辑 图片</span></a></td>
+                                <td class="mceToolbarEnd mceToolbarEndButton mceLast"><span><!-- IE --></span></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          </span></div>
+                        <a onfocus="tinyMCE.getInstanceById('positionDetail').focus();" title="转到工具按钮 - Alt-Q，转到编辑器 - Alt-Z，转到元素路径 - Alt-X。" accesskey="z" href="#"><!-- IE --></a></td>
+                    </tr>
+                    <tr class="mceLast">
+                      <td class="mceIframeContainer mceFirst mceLast"><iframe frameborder="0" id="positionDetail_ifr" src="javascript:&quot;&quot;" allowtransparency="true" title="富文本域按 ALT-F10 定位到工具栏.按 ALT-0 获取帮助。" style="width: 100%; height: 253px; display: block;"></iframe></td>
+                    </tr>
+                  </tbody>
+                </table>
+                </span>
+                <p id="cccmoban"><a href="#">根据所选岗位职能生成模板</a></p></td>
+            </tr>
+          </tbody>
+        </table>
+          </tbody>
+        
+      </table>
+      <table>
+        <tbody>
+          <tr>
+            <td width="25"><span class="redstar">*</span></td>
+            <td colspan="2"> 接收简历邮箱： <span id="receiveEmailVal">caijingshu@111111.org.cn</span>
+              <input type="hidden" value="caijingshu@111111.org.cn" id="receiveEmail" name="email"></td>
+          </tr>
+          <tr>
+            <td width="25"></td>
+            <td colspan="2"> 同时简历自动发送至以下邮箱
+              <div class="cccclearfix cccemailadd">
+                <div  class="fl" >
+                  <input type="text" value="" id="forwardEmail" name="forwardEmail">
+                </div>
+                <div class="fl">
+                  <input type="button" value="+" class="ccc_addbtn">
+                </div>
+              </div>
+              <div class="cccclearfix cccemailadd">
+                <div  class="fl" >
+                  <input type="text" value="" id="forwardEmail" name="forwardEmail">
+                </div>
+                <div class="fl">
+                  <input type="button" value="-" class="ccc_addbtn">
+                </div>
+              </div>
+              
+              <!-- <span class="error" id="beError" style="display:none"></span> --></td>
+          </tr>
+          <tr>
+            <td width="25"></td>
+            <td colspan="2"><input type="submit" value="预览" id="cccjobPreview" class="cccbtn50_2">
+              <input type="button" value="发布" id="cccformSubmit" class="cccbtn50"></td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+    
+    <!--招聘信息结束--> 
+    
+  </div>
+  
+  <!--左边框部分结束--> <!--右边框部分开始-->
+  <div class="ccc_sidebar fr"> <a class="btn_create" href="#">发布新职位</a>
+    <dl class="company_center_aside">
+      <dt>我收到的简历</dt>
+      <dd> <a href="#">待处理简历</a> </dd>
+      <dd> <a href="#">待定简历</a> </dd>
+      <dd> <a href="#">已通知面试简历</a> </dd>
+      <dd> <a href="#">不合适简历</a> </dd>
+      <dd class="btm"> <a href="#">自动过滤简历</a> </dd>
+    </dl>
+    <dl class="company_center_aside">
+      <dt>我发布的职位</dt>
+      <dd> <a href="#">有效职位</a> </dd>
+      <dd> <a href="#">已下线职位</a> </dd>
+    </dl>
+  </div>
+  <div class="clear"></div>
+  <!--右边结束--> 
+  
+</div>
+<!-- end #container --> 
+
+<!--版权信息-->
+<div id="cccfooter">
+  <div class="cccwrapper">
+    <div class="ccccopyright">Copyright © 2014-2015 jinrongma.com All Rights Reserved　金融妈</div>
+    <a href="#" target="_blank">关于金融妈<i></i></a> <a href="#" target="_blank" rel="nofollow">联系我们<i></i></a> <a href="#" target="_blank" rel="nofollow">伯东与千里马</a> </div>
+</div>
+</body>
+</html>

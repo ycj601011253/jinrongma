@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="{% static 'css/stylecc.css' %}" rel="stylesheet" type="text/css" />
+<!--[if IE 6]>
+<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a.js"></script>
+<script type="text/javascript">
+	DD_belatedPNG.fix('*');
+</script>
+<![endif]-->
+
+</head>
+
+<body id="ccclogin_bg">
+<div class="ccclogin_wrapper">
+  <div class="ccclogin_header"> <a href="/buyer/index/"><img src="{% static 'images/logo.png' %}" width="433" height="109" alt="金融妈招聘" /></a>
+    <div id="cccregword">注册</div>
+  </div>
+  <input type="hidden" id="resubmitToken" value="" />
+  <div class="cccccclogin_box_btp"></div>
+  <div class="ccclogin_box">
+    <form id="cccloginForm" method="post">
+        {% csrf_token %}
+      <ul class="cccregister_radio cccclearfix">
+        <li > 企业
+          <input type="radio" value="0" name="type" />
+        </li >
+        <li class="current"> 个人
+          <input type="radio" value="1" name="type" />
+        </li>
+      </ul>
+      <input type="text" id="email" name="email" tabindex="1" placeholder="请输入常用邮箱地址"/><span></span>
+      <span class="error" style=" display:none;" >1fdfd</span>
+      <input type="password" id="password" name="password" tabindex="2" placeholder="请输入密码" />
+      <span class="error" style=" display:none;" >1fdfd</span>
+      <label class="cccfl" for="checkbox">
+        <input type="checkbox" id="checkbox" name="checkbox" checked  class="checkbox valid" />
+        我已阅读并同意<a href="#" target="_blank">《金融妈用户协议》</a></label>
+      <input type="submit" id="submitLogin" value="注册" />
+    </form>
+    <div class="ccclogin_right">
+      <p class="cccmb10">已有金融妈帐号</p>
+      <p><a  href="/buyer/login/"  class="cccregistor_now">直接登录</a></p>
+      <p class="login_others">使用以下帐号直接登录:</p>
+      <ul class="otherlogin">
+        <li><a href="#" class="icon_qq" title="使用腾讯QQ帐号登录"></a> </li>
+        <li><a  href="#" class="icon_xl"  title="使用新浪微博帐号登录" ></a> </li>
+        <li><a  href="#" class="icon_rr"  title="使用人人网帐号登录" ></a></li>
+        <li><a href="#" class="icon_wx"  title="使用微信帐号登录" ></a>
+      </ul>
+    </div>
+  </div>
+  <div class="ccclogin_box_btm"></div>
+  <div class="cc_copyright">Copyright © 2014-2015 jinrongma.com All Rights Reserved　金融妈</div>
+</div>
+</body>
+<script type="text/javascript">
+	$("#email").blur(
+                    function () {
+                        // 2.获取邮箱
+                        email = $("#email").val();
+                        $.ajax(
+                            {
+                                url: "/buyer/email/",
+                                type: "get",
+                                data: {"email":email},
+                                success:function (data) {
+                                    if (data["result"]=="true"){
+                                        $()
+                                    }
+                                }
+                            }
+                        )
+                    }
+                )
+</script>
+</html>
