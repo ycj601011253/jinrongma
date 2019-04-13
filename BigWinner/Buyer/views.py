@@ -2,7 +2,18 @@ from django.shortcuts import render,redirect
 import hashlib
 # Create your views here.
 from .models import *
+from django.http import JsonResponse
 
+def buyer_decorater(func):
+    def inner(request):
+        email=request.session.get("email")
+        user_id=request.COOKIES.get("user_id")
+        print(email,user_id)
+        if email and user_id:
+            return func(request)
+        else:
+            return redirect('/buyer/login/')
+    return inner
 
 def pwd_encypt(pwd):
     '''密码加密'''
@@ -10,33 +21,73 @@ def pwd_encypt(pwd):
     md5.update(pwd.encode())
     return md5.hexdigest()
 
-
 def index(request):
+
     return render(request,"buyer/index.html")
 
 def email(request):
     return render(request,'buyer/email.html')
 
 def login(request):
-    return render(request,'buyer/login.html')
-
-def register(request):
-    data={}
-    email=request.GET.get("email")
-    print(email)
-    if Buyer.objects.filter(email=email):
-        print("Ss")
-        data["error"]="用户名已存在"
+    data={"error":""}
+    if request.session.get("email"):
+        return redirect("/buyer/index/")
     if request.method=="POST":
         email=request.POST.get("email")
-        password=request.POST.get("password")
-        password=pwd_encypt(password)
-        buyer_obj=Buyer()
-        buyer_obj.email=email
-        buyer_obj.password=password
-        buyer_obj.save()
-        return redirect('/buyer/index/')
-    return render(request,'buyer/register.html',locals())
+        buyer_obj=Buyer.objects.filter(email=email)
+        if buyer_obj:
+            password=request.POST.get("password")
+            pwd=pwd_encypt(password)
+            if buyer_obj[0].password==pwd:
+                response=redirect("/buyer/index/")
+                response.set_cookie("user_id",buyer_obj[0].id)
+                request.session["email"]=email
+                return response
+            else:
+                data["error"]="密码错误"
+        else:
+            data["error"]="用户名不存在"
+    return render(request,'buyer/login.html',locals())
+
+def logout(request):
+    response = redirect('/buyer/index/')
+    response.delete_cookie('id')
+    del request.session['email']
+    return response
+
+def register_ajax(request):
+    data={}
+    email = request.GET.get("email")
+    type=request.GET.get("type")
+    if int(type)==1:
+        if Buyer.objects.filter(email=email):
+            data["result"]="true"
+    else:
+        if Company.objects.filter(email=email):
+            data["result"]="true"
+    return JsonResponse(data=data)
+
+def register(request):
+    if request.method=="POST":
+        if request.POST.get("ok")=="ok":
+            type2=request.POST.get("type2")
+            email = request.POST.get("email")
+            password = request.POST.get("password")
+            password = pwd_encypt(password)
+            if int(type2)==1:
+                buyer_obj=Buyer()
+            else:
+                buyer_obj=Company()
+            buyer_obj.email = email
+            buyer_obj.password = password
+            buyer_obj.save()
+            return redirect('/buyer/index/')
+        else:
+            data={"error":"注册失败，请重新输入"}
+            return render(request, 'buyer/register.html',{"data":data})
+    return render(request,'buyer/register.html')
+
+
 
 def person_step1(request):
     return render(request,'buyer/个人信息注册_个人信息填写.html')

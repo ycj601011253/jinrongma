@@ -1,36 +1,6 @@
+{% extends "buyer/base.html" %}
 {% load static %}
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>无标题文档</title>
-<link href="{% static 'css/stylecc.css' %}" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="{% static 'js/jquery1.42.min.js' %}"></script><script type="text/javascript" src="{% static 'js/jquery.SuperSlide.2.1.1.js' %}"></script>
-</head>
-<!--[if IE 6]>
-<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a.js"></script>
-<script type="text/javascript">
-	DD_belatedPNG.fix('*');
-</script>
-<![endif]-->
-
-<body>
-<div id="cccheader">
-  <div class="ccchuany">
-    <p>你好 ，xxxxxx@163.com <a href="/buyer/">帮助</a></p>
-  </div>
-  <div class="cccwrapper"> <a href="/buyer/index/" class="logo"> <img src="{% static 'images/logob.png' %}" width="211" height="53" alt="金融妈 jinrongma.com" /> </a>
-    <ul class="cccreset" id="navcccheader">
-      <li><a href="/buyer/index/">首页</a></li>
-      <li><a href="/buyer/company_public_job/">招聘</a><i></i></li>
-      <li><a href="/buyer/index/">每日要闻</a><i></i></li>
-      <li><a href="/buyer/index/" rel="nofollow">金融社区</a></li>
-    </ul>
-    <div id="ccclogin"  > <a href="/buyer/register/" target="_blank" class="ccczc">注册</a> <a href="/buyer/login/" class="cccdn">登录</a> </div>
-  </div>
-</div>
-<!-- end #header -->
-
+{% block content %}
 <div class="ccc_container" style="overflow:hidden; background-color:transparent; margin-bottom:40px;">
   <div class="leftsidebar">
     <div id="zwmenu">
@@ -132,7 +102,7 @@
         </li>
       </ul>
       <script type="text/javascript">
-		jQuery("#cccnav").slide({ 
+		jQuery("#cccnav").slide({
 				type:"menu", //效果类型
 				titCell:".mainCate", // 鼠标触发对象
 				targetCell:".subCate", // 效果对象，必须被titCell包含
@@ -141,7 +111,7 @@
 				defaultPlay:false,//默认执行
 				returnDefault:true//返回默认
 			});
-	</script> 
+	</script>
     </div>
     <div class="cccdinggou"> <a href="/buyer/">订阅职位</a> </div>
     <div class="cccadvpic"> <a href="/buyer/"><img src="{% static 'images/cccadvpic.jpg' %}" width="220" height="105" /></a> <a href="/buyer/"><img src="{% static 'images/cccadvpic2.jpg' %}" width="220" height="105" /></a> </div>
@@ -186,7 +156,7 @@
 			}
 		});
 
-	</script> 
+	</script>
     </div>
     <div id="ccc_companylogo">
       <ul>
@@ -211,13 +181,13 @@
               <div class="mb10"> <a href="/buyer/">网页设计师</a> &nbsp; <span class="c9">[成都]</span> </div>
               <span><em class="c7">月薪： </em>4k-7k</span> <span><em class="c7">经验：</em> 不限</span> <span><em class="c7">最低学历： </em>大专</span> <br>
               <span><em class="c7">职位诱惑：</em>双休、工作餐、加班少、五险一金</span> <br>
-              <span><em class="c7">发布时间：</em>2014-07-08</span> 
+              <span><em class="c7">发布时间：</em>2014-07-08</span>
               <ul class="companyTags reset">
                 <li>五险一金</li>
                 <li>带薪年假</li>
                 <li>节日礼物</li>
               </ul>
-              <!-- <a href="/buyer/" class="wb">分享到微博</a> --> 
+              <!-- <a href="/buyer/" class="wb">分享到微博</a> -->
             </div>
             <div class="hot_pos_r">
               <div class="mb10 recompany"><a  href="/buyer/">品胜电子</a></div>
@@ -237,13 +207,13 @@
               <div class="mb10"> <a href="/buyer/">网页设计师</a> &nbsp; <span class="c9">[成都]</span> </div>
               <span><em class="c7">月薪： </em>4k-7k</span> <span><em class="c7">经验：</em> 不限</span> <span><em class="c7">最低学历： </em>大专</span> <br>
               <span><em class="c7">职位诱惑：</em>双休、工作餐、加班少、五险一金</span> <br>
-              <span><em class="c7">发布时间：</em>2014-07-08</span> 
+              <span><em class="c7">发布时间：</em>2014-07-08</span>
               <ul class="companyTags reset">
                 <li>五险一金</li>
                 <li>带薪年假</li>
                 <li>节日礼物</li>
               </ul>
-              <!-- <a href="/buyer/" class="wb">分享到微博</a> --> 
+              <!-- <a href="/buyer/" class="wb">分享到微博</a> -->
             </div>
             <div class="hot_pos_r">
               <div class="mb10 recompany"><a  href="/buyer/">品胜电子</a></div>
@@ -263,13 +233,13 @@
               <div class="mb10"> <a href="/buyer/">网页设计师</a> &nbsp; <span class="c9">[成都]</span> </div>
               <span><em class="c7">月薪： </em>4k-7k</span> <span><em class="c7">经验：</em> 不限</span> <span><em class="c7">最低学历： </em>大专</span> <br>
               <span><em class="c7">职位诱惑：</em>双休、工作餐、加班少、五险一金</span> <br>
-              <span><em class="c7">发布时间：</em>2014-07-08</span> 
+              <span><em class="c7">发布时间：</em>2014-07-08</span>
               <ul class="companyTags reset">
                 <li>五险一金</li>
                 <li>带薪年假</li>
                 <li>节日礼物</li>
               </ul>
-              <!-- <a href="/buyer/" class="wb">分享到微博</a> --> 
+              <!-- <a href="/buyer/" class="wb">分享到微博</a> -->
             </div>
             <div class="hot_pos_r">
               <div class="mb10 recompany"><a  href="/buyer/">品胜电子</a></div>
@@ -289,13 +259,13 @@
               <div class="mb10"> <a href="/buyer/">网页设计师</a> &nbsp; <span class="c9">[成都]</span> </div>
               <span><em class="c7">月薪： </em>4k-7k</span> <span><em class="c7">经验：</em> 不限</span> <span><em class="c7">最低学历： </em>大专</span> <br>
               <span><em class="c7">职位诱惑：</em>双休、工作餐、加班少、五险一金</span> <br>
-              <span><em class="c7">发布时间：</em>2014-07-08</span> 
+              <span><em class="c7">发布时间：</em>2014-07-08</span>
               <ul class="companyTags reset">
                 <li>五险一金</li>
                 <li>带薪年假</li>
                 <li>节日礼物</li>
               </ul>
-              <!-- <a href="/buyer/" class="wb">分享到微博</a> --> 
+              <!-- <a href="/buyer/" class="wb">分享到微博</a> -->
             </div>
             <div class="hot_pos_r">
               <div class="mb10 recompany"><a  href="/buyer/">品胜电子</a></div>
@@ -317,13 +287,13 @@
               <div class="mb10"> <a href="/buyer/">网页设计师</a> &nbsp; <span class="c9">[成都]</span> </div>
               <span><em class="c7">月薪： </em>4k-7k</span> <span><em class="c7">经验：</em> 不限</span> <span><em class="c7">最低学历： </em>大专</span> <br>
               <span><em class="c7">职位诱惑：</em>双休、工作餐、加班少、五险一金</span> <br>
-              <span><em class="c7">发布时间：</em>2014-07-08</span> 
+              <span><em class="c7">发布时间：</em>2014-07-08</span>
               <ul class="companyTags reset">
                 <li>五险一金</li>
                 <li>带薪年假</li>
                 <li>节日礼物</li>
               </ul>
-              <!-- <a href="/buyer/" class="wb">分享到微博</a> --> 
+              <!-- <a href="/buyer/" class="wb">分享到微博</a> -->
             </div>
             <div class="hot_pos_r">
               <div class="mb10 recompany"><a  href="/buyer/">品胜电子</a></div>
@@ -343,13 +313,13 @@
               <div class="mb10"> <a href="/buyer/">网页设计师</a> &nbsp; <span class="c9">[成都]</span> </div>
               <span><em class="c7">月薪： </em>4k-7k</span> <span><em class="c7">经验：</em> 不限</span> <span><em class="c7">最低学历： </em>大专</span> <br>
               <span><em class="c7">职位诱惑：</em>双休、工作餐、加班少、五险一金</span> <br>
-              <span><em class="c7">发布时间：</em>2014-07-08</span> 
+              <span><em class="c7">发布时间：</em>2014-07-08</span>
               <ul class="companyTags reset">
                 <li>五险一金</li>
                 <li>带薪年假</li>
                 <li>节日礼物</li>
               </ul>
-              <!-- <a href="/buyer/" class="wb">分享到微博</a> --> 
+              <!-- <a href="/buyer/" class="wb">分享到微博</a> -->
             </div>
             <div class="hot_pos_r">
               <div class="mb10 recompany"><a  href="/buyer/">品胜电子</a></div>
@@ -369,13 +339,13 @@
               <div class="mb10"> <a href="/buyer/">网页设计师</a> &nbsp; <span class="c9">[成都]</span> </div>
               <span><em class="c7">月薪： </em>4k-7k</span> <span><em class="c7">经验：</em> 不限</span> <span><em class="c7">最低学历： </em>大专</span> <br>
               <span><em class="c7">职位诱惑：</em>双休、工作餐、加班少、五险一金</span> <br>
-              <span><em class="c7">发布时间：</em>2014-07-08</span> 
+              <span><em class="c7">发布时间：</em>2014-07-08</span>
               <ul class="companyTags reset">
                 <li>五险一金</li>
                 <li>带薪年假</li>
                 <li>节日礼物</li>
               </ul>
-              <!-- <a href="/buyer/" class="wb">分享到微博</a> --> 
+              <!-- <a href="/buyer/" class="wb">分享到微博</a> -->
             </div>
             <div class="hot_pos_r">
               <div class="mb10 recompany"><a  href="/buyer/">品胜电子</a></div>
@@ -395,13 +365,13 @@
               <div class="mb10"> <a href="/buyer/">网页设计师</a> &nbsp; <span class="c9">[成都]</span> </div>
               <span><em class="c7">月薪： </em>4k-7k</span> <span><em class="c7">经验：</em> 不限</span> <span><em class="c7">最低学历： </em>大专</span> <br>
               <span><em class="c7">职位诱惑：</em>双休、工作餐、加班少、五险一金</span> <br>
-              <span><em class="c7">发布时间：</em>2014-07-08</span> 
+              <span><em class="c7">发布时间：</em>2014-07-08</span>
               <ul class="companyTags reset">
                 <li>五险一金</li>
                 <li>带薪年假</li>
                 <li>节日礼物</li>
               </ul>
-              <!-- <a href="/buyer/" class="wb">分享到微博</a> --> 
+              <!-- <a href="/buyer/" class="wb">分享到微博</a> -->
             </div>
             <div class="hot_pos_r">
               <div class="mb10 recompany"><a  href="/buyer/">品胜电子</a></div>
@@ -419,14 +389,8 @@
         </ul>
       </div>
     </div>
-    <script type="text/javascript">jQuery(".cccslideTxtBox").slide();</script> 
+    <script type="text/javascript">jQuery(".cccslideTxtBox").slide();</script>
   </div>
 </div>
-<!-- end #container -->
-<div id="cccfooter">
-  <div class="cccwrapper">
-    <div class="ccccopyright">Copyright © 2014-2015 jinrongma.com All Rights Reserved　金融妈</div>
-    <a href="/buyer/" target="_blank">关于金融妈<i></i></a> <a href="/buyer/" target="_blank" rel="nofollow">联系我们<i></i></a> <a href="/buyer/" target="_blank" rel="nofollow">伯东与千里马</a> </div>
-</div>
-</body>
-</html>
+{% endblock %}
+

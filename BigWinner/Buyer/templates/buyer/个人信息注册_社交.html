@@ -1,34 +1,7 @@
+{% extends 'buyer/base.html' %}
 {% load static %}
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>无标题文档</title>
-<link href="{% static 'css/stylecc.css' %}" rel="stylesheet" type="text/css" />
-<!--[if IE 6]>
-<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a.js"></script>
-<script type="text/javascript">
-	DD_belatedPNG.fix('*');
-</script>
-<![endif]-->
-</head>
+{% block content %}
 
-<body>
-<div id="cccheader">
-  <div class="ccchuany">
-    <p>你好 ，xxxxxx@163.com <a href="#">帮助</a></p>
-  </div>
-  <div class="cccwrapper"> <a href="" class="logo"> <img src="{% static 'images/logob.png' %}" width="256" height="63" alt="金融妈 jinrongma.com" /> </a>
-    <ul class="cccreset" id="navcccheader">
-      <li><a href="#">首页</a></li>
-      <li><a href="#" >招聘</a><i></i></li>
-      <li><a href="#" target="_blank">每日要闻</a><i></i></li>
-      <li><a href="#" rel="nofollow">金融社区</a></li>
-    </ul>
-    <div id="ccclogin"  > <a href="#" target="_blank" class="ccczc">注册</a> <a href="#" class="cccdn">登录</a> </div>
-  </div>
-</div>
-<!-- end #header --> 
 
 <!--左右布局结构开始-->
 <div class="c_personset">
@@ -125,13 +98,4 @@
   <!--右边结束--> 
   
 </div>
-<!-- end #container --> 
-
-<!--版权信息-->
-<div id="cccfooter">
-  <div class="cccwrapper">
-    <div class="ccccopyright">Copyright © 2014-2015 jinrongma.com All Rights Reserved　金融妈</div>
-    <a href="#" target="_blank">关于金融妈<i></i></a> <a href="#" target="_blank" rel="nofollow">联系我们<i></i></a> <a href="#" target="_blank" rel="nofollow">伯东与千里马</a> </div>
-</div>
-</body>
-</html>
+{% endblock %}

@@ -5,24 +5,24 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
 <link href="{% static 'css/stylecc.css' %}" rel="stylesheet" type="text/css" />
-<!--[if IE 6]>
-<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a.js"></script>
+
+<script type="text/javascript" src="{% static 'js/DD_belatedPNG_0.0.8a.js' %}"></script>
 <script type="text/javascript">
 	DD_belatedPNG.fix('*');
 </script>
-<![endif]-->
+
 </head>
 
 <body id="ccclogin_bg">
 <div class="ccclogin_wrapper">
-  <div class="ccclogin_header"> <a href="#"><img src="{% static 'images/logo.png' %}" width="433" height="109" alt="金融妈招聘" /></a>
+  <div class="ccclogin_header"> <a href="/buyer/index/"><img src="{% static 'images/logo.png' %}" width="433" height="109" alt="金融妈招聘" /></a>
     <div id="cccregword">登录</div>
   </div>
   <input type="hidden" id="resubmitToken" value="" />
   <div class="cccccclogin_box_btp"></div>
   <div class="ccclogin_box ccclogin_box2">
-    <form id="cccloginForm">
-     
+    <form id="cccloginForm" method="post">
+     {% csrf_token %}
       <input type="text" id="email" name="email" tabindex="1" placeholder="请输入登录邮箱地址" />
       <span class="error" style=" display:none;" >1fdfd</span>
       <input type="password" id="password" name="password" tabindex="2" placeholder="请输入密码" />
@@ -34,10 +34,11 @@
          <a href="#" target="_blank" class="fr" >忘记密码</a> 
          <div class=" clear"></div>
       <input type="submit" id="submitLogin" value="登录" />
+        <p style="margin-top: 50px;color: red">{{ data.error }}</p>
     </form>
     <div class="ccclogin_right">
       <p class="cccmb10">还没有金融妈账号</p>
-      <p><a  href="#"  class="cccregistor_now">立即注册</a></p>
+      <p><a  href="/buyer/register/"  class="cccregistor_now">立即注册</a></p>
       <p class="login_others">使用以下帐号直接登录:</p>
       <ul class="otherlogin">
         <li><a href="#" class="icon_qq" title="使用腾讯QQ帐号登录"></a> </li>
